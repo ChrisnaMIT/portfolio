@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container-fluid bg-light py-5" style="min-height: 100vh;">
+        <div class="container">
+
+            <!-- Image principale -->
+            <div class="mb-5">
+                <img src="{{ asset('images/morpion.png') }}" alt="Image principale du projet"
+                     class="img-fluid rounded shadow-sm w-100" style="max-height: 400px; object-fit: cover;">
+            </div>
+
+            <!-- Titre + infos -->
+            <h2 class="mb-4">Morpion</h2>
+            <hr>
+
+            <div class="row mb-5">
+                <div class="col-md-2 fw-bold">Description</div>
+                <div class="col-md-10">Ce projet est un jeu du Morpion développé entièrement en JavaScript. Il a été réalisé dans le cadre de mes cours pour mettre en pratique la manipulation du DOM, la gestion des événements et la logique de jeu. Le joueur peut affronter un autre joueur en local dans une grille interactive. L'interface est simple, intuitive, et fonctionne sans aucune librairie externe.</div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-md-2 fw-bold">Année</div>
+                <div class="col-md-10">2024</div>
+            </div>
+
+
+            {#Des autres images
+
+             <div class="row g-4">
+                <div class="col-md-6">
+                    <img src="{{ asset('images/projets/image2.jpg') }}" alt="Projet image 2"
+                         class="img-fluid rounded shadow-sm w-100" style="max-height: 300px; object-fit: cover;">
+                </div>
+                <div class="col-md-6">
+                    <img src="{{ asset('images/projets/image3.jpg') }}" alt="Projet image 3"
+                         class="img-fluid rounded shadow-sm w-100" style="max-height: 300px; object-fit: cover;">
+                </div>
+            </div>
+
+            #}
+
+            <a href="{{ path('app_projets') }}" class="btn btn-outline-dark mt-4">
+                ← Retour aux projets
+            </a>
+
+
+        </div>
+    </div>
+{% endblock %}
