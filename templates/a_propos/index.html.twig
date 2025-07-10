@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container py-5" style="min-height: 100vh;">
+        <div class="row align-items-center">
+            <!-- Colonne gauche : description -->
+            <div class="col-md-7 mb-4">
+                <h1 class="mb-4">À propos de moi</h1>
+                <p class="lead">
+                    Je m'appelle Chrisna, étudiant en Bachelor pour devenir développeur web.
+
+                </p>
+                <p>Actuellement à la recherche de nouvelles opportunités et toujours motivé à apprendre davantage.</p>
+
+                <div class="mt-4 d-flex gap-3">
+                    <!-- Lien vers CV -->
+                    <a href="" class="btn btn-outline-primary" download>
+                        📄 Télécharger mon CV
+                    </a>
+
+                    <!-- Lien vers GitHub -->
+                    <a href="https://github.com/ChrisnaMIT" target="_blank" class="btn btn-dark">
+                        🔗 Mon GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- Colonne droite : image ou avatar -->
+            <div class="col-md-5 text-center">
+                <img src="{{ asset('images/morpion.png') }}" alt="Photo de Chrisna" class="img-fluid rounded-circle shadow" style="max-width: 300px;">
+            </div>
+        </div>
+    </div>
+{% endblock %}

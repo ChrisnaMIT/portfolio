@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container-fluid bg-light min-vh-100">
+        <div class="row">
+            <!-- Image à gauche -->
+            <div class="col-md-6 d-flex align-items-center justify-content-center bg-secondary-subtle" style="min-height: 90vh;">
+                <img id="previewImage" src="" alt="Preview projet" class="img-fluid rounded shadow d-none" style="max-height: 400px;">
+            </div>
+
+            <!-- Liste des projets à droite -->
+            <div class="col-md-6 py-5 px-4">
+                <h2 class="display-5 mb-4">PROJETS</h2>
+                <hr>
+                <div class="list-group">
+
+                    <a href="https://chrisnamit.github.io/Morpion-JS/" target="_blank"
+                       class="list-group-item list-group-item-action d-flex justify-content-between"
+                       onmouseover="showImage('images/morpion.png')" onmouseout="hideImage()">
+                        Morpion <span>Développement web (javaScript)</span>
+
+                    </a>
+                    <a href="{{path('app_projet_morpion') }}">  <span>Plus de détail</span></a>
+                    <br>
+
+
+
+
+                    <a href="https://chrisnamit.github.io/KanyeAPI/" target="_blank" class="list-group-item list-group-item-action d-flex justify-content-between"
+                       onmouseover="showImage('images/kanye.png')" onmouseout="hideImage()">API Kanye West <span>Développement web</span>
+                    </a>
+                    <a href="{{path('app_projet_kanye') }}">  <span>Plus de détail</span></a>
+                    <br>
+
+
+
+
+
+                    <a href="https://chrisnamit.github.io/CorrigePendu/" target="_blank" class="list-group-item list-group-item-action d-flex justify-content-between"
+                       onmouseover="showImage('images/pendu.png')" onmouseout="hideImage()">Pendu  <span>Développement web (javaScript)</span>
+                    </a>
+                    <a href="{{path('app_projet_pendu') }}">  <span>Plus de détail</span></a>
+                    <br>
+
+
+
+
+
+                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between"
+                       onmouseover="showImage('projet4.jpg')" onmouseout="hideImage()">Site Ecommerce <span>Développement web</span>
+                    </a>
+                    <a href="{{path('app_projet_ecom') }}">  <span>Plus de détail</span></a>
+                    <br>
+
+
+
+
+
+                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between"
+                       onmouseover="showImage('projet5.jpg')" onmouseout="hideImage()">Réseau social  <span>Développement web</span>
+                    </a>
+                    <a href="{{path('app_projet_reseauSocial') }}">  <span>Plus de détail</span></a>
+                    <br>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showImage(fileName) {
+            const img = document.getElementById('previewImage');
+            img.src = '/' + fileName;
+            img.classList.remove('d-none');
+        }
+
+        function hideImage() {
+            const img = document.getElementById('previewImage');
+            img.classList.add('d-none');
+            img.src = '';
+        }
+    </script>
+{% endblock %}
+
